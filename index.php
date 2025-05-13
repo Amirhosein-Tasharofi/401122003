@@ -19,13 +19,13 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav  mb-2 mb-lg-0">
                 <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="/">Home</a>
+                    <a class="nav-link active" aria-current="page" href="/WebProgramming/index.php">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="/WebProgramming/infs.php">Information</a>
+                    <a class="nav-link active" aria-current="page" href="/WebProgramming/Information.php">Information</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="/WebProgramming/contact-us.php">Contact Us</a>
+                    <a class="nav-link active" aria-current="page" href="/WebProgramming/Contact_Us.php">Contact Us</a>
                 </li>            
                 </ul>
             </div>
@@ -34,15 +34,15 @@
     <div class="lnfoform">
         <div class="container">
             <div class="form">
-                <form action="process-form.php" method="POST">
+                <form action="Process_Form.php" method="POST">
                     <h2 class="heading__form">Send Information Form</h2>
                     <div class="input__Username">
-                        <label for="Username">First Name</label>
-                        <input type="text" id="Username" name="Username" placeholder="Name">
+                        <label for="name">First Name</label>
+                        <input type="text" id="name" name="name" placeholder="Name">
                     </div>
-                    <div class="input__Password">
-                        <label for="Password">Last Name</label>
-                        <input type="text" id="Password" name="Password" placeholder="Last Name">
+                    <div class="input__Lastname">
+                        <label for="last_name">Last Name</label>
+                        <input type="text" id="last_name" name="last_name" placeholder="Last Name">
                     </div>
                     <button type="submit" class="Button">Submit</button>
                 </form>
