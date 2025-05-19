@@ -1,0 +1,4 @@
+RewriteEngine on
+RewriteBase /WebProgramming/
+
+RewriteRule ^(.*)$ index.php?url=$1 [L,QSA]
