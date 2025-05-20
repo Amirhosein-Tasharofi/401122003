@@ -49,7 +49,7 @@
       font-size: 13px;
       color: #888;
     }
-  </style>
+</style>
   <footer class="site-footer">
     <div class="footer-container">
       <div class="footer-left">

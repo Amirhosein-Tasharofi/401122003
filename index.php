@@ -1,36 +1,47 @@
 <?php
 define('ROOT_PATH',__DIR__);
+require __DIR__.'/vendor/autoload.php';
 require_once(__DIR__.'/helper/functions.php');
 
-$method = $_SERVER['REQUEST_METHOD'];
-$uri = parse_url($_SERVER['REQUEST_URI'],PHP_URL_PATH);
+use App\Route;
+use App\Controller\FrontController;
 
-// echo($method);
-// echo('<br>');
-// print_r($uri);
+$route = new Route();
+$route->addRoute("GET","/WebProgramming/",[FrontController::class, 'home']);
+$route->addRoute("GET",'/WebProgramming/about',[FrontController::class, 'about']);
+$route->addRoute("GET",'/WebProgramming/infs',[FrontController::class, 'infs']);
+$route->dispatch();
 
-if($uri == "/WebProgramming/")
-{
-    view('home.php');
+// $method = $_SERVER['REQUEST_METHOD'];
+// $uri = parse_url($_SERVER['REQUEST_URI'],PHP_URL_PATH);
 
-}
-else if ($uri == '/WebProgramming/infs')
-{
-    view('infs.php');
 
-}
-else if($uri == '/WebProgramming/header')
-{
-    view('header.php');
+// // echo($method);
+// // echo('<br>');
+// // print_r($uri);
 
-}else if($uri == '/WebProgramming/about')
-{
-    view('about.php');
+// if($uri == "/WebProgramming/")
+// {
+//     view('home.php');
 
-}
-else{
-    view('404.php');
+// }
+// else if ($uri == '/WebProgramming/infs')
+// {
+//     view('infs.php');
+
+// }
+// else if($uri == '/WebProgramming/header')
+// {
+//     view('header.php');
+
+// }else if($uri == '/WebProgramming/about')
+// {
+//     view('about.php');
+
+// }
+// else{
+//     view('404.php');
     
-}
+// }
 
-?>
+// ?>
